@@ -24,6 +24,16 @@ plt.show()
 ### Setting up k-means
 k_means = KMeans(init = "k-means++", n_clusters = 4, n_init = 12)
 k_means.fit(X)
+'''
+init: Initialization method of the centroids.
+Value will be: k-means++
+k-means++: Selects initial cluster centres for k-means clustering in a smart way to speed up convergence.
+n_clusters: The number of clusters to form as well as the number of centroids to generate.
+Value will be: 4 (since we have 4 centres)
+n_init: Number of times the k-means algorithm will be run with different centroid seeds. The final results will be the best output of n_init consecutive runs in terms of inertia.
+Value will be: 12
+'''
+
 
 k_means_labels = k_means.labels_
 print(k_means_labels)
